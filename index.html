@@ -21,9 +21,21 @@
       iframe {
         max-width: 100% !important;
       }
-    
-      /* Optional: hide horizontal overflow just in case */
-      #ig-root { overflow: hidden; }
+
+      /* Kill any minimum widths Instagram injects */
+      iframe.instagram-media,
+      .instagram-media-rendered {
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      /* Also make sure the wrapper can shrink */
+      #ig-root, .ig-scale {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden;
+      }
 
       /* Scaling wrapper */
       .ig-scale {
