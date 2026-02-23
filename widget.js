@@ -28,7 +28,7 @@ async function loadLatest() {
           data-instgrm-captioned
           data-instgrm-permalink="${permalink}"
           data-instgrm-version="14"
-          style="background:#FFF;border:0!important;border-radius:3px;margin:0;width:100%;">
+          style="background:#FFF;border:none!important;border-radius:3px;margin:0;width:100%;">
         </blockquote>
         </div>
       `;
