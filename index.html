@@ -6,7 +6,24 @@
     <title>Latest Instagram Post</title>
     <style>
       body { margin: 0; background: transparent; }
-      .wrap { max-width: 540px; margin: 0 auto; }
+      .wrap { width: 100%; max-width: 100%; margin: 0; }
+    
+      /* Make Instagram embed allowed to shrink */
+      blockquote.instagram-media {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+      }
+    
+      /* The embed injects an iframe-ish structure; this helps in some cases */
+      .instagram-media-rendered,
+      iframe {
+        max-width: 100% !important;
+      }
+    
+      /* Optional: hide horizontal overflow just in case */
+      #ig-root { overflow: hidden; }
     </style>
   </head>
   <body>
