@@ -22,14 +22,16 @@ async function loadLatest() {
 
   // Caption ON via data-instgrm-captioned
   root.innerHTML = `
-    <blockquote
-      class="instagram-media"
-      data-instgrm-captioned
-      data-instgrm-permalink="${permalink}"
-      data-instgrm-version="14"
-      style="background:#FFF;border:0;border-radius:3px;margin:0;width:100%;">
-    </blockquote>
-  `;
+      <div class="ig-scale" id="ig-scale">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink="${permalink}"
+          data-instgrm-version="14"
+          style="background:#FFF;border:0;border-radius:3px;margin:0;width:100%;">
+        </blockquote>
+        </div>
+      `;
 
   // If embed.js is already loaded, process immediately.
   if (window.instgrm?.Embeds?.process) {
